@@ -735,25 +735,28 @@
 }
 
 .story-card-text {
-  /* top: 0; */
   width: 150px;
   max-height: 37px;
-  font-size: 13px;
-  line-height: 17px;
-  position: absolute;
-  z-index: 1;
-  color: #fff;
-  transform: translateY(50%);
-  transition: transform 0.2s ease-in-out;
   overflow: hidden;
   /* border: solid 1px red; */
 }
-.story-card-img ~ .story-card-text {
+
+.story-card-text-inner {
+  font-size: 13px;
+  line-height: 17px;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(50%);
+  transition: transform 0.2s ease-in-out;
+}
+.story-card:hover ~ .story-card-text-inner {
   transform: translateY(0);
   cursor: pointer;
 }
-.story-card-text:hover {
-  transform: translate(0);
+.story-card-text-inner:hover {
+  transform: translateY(0);
+  cursor: pointer;
   overflow: visible;
 }
 
